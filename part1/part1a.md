@@ -14,7 +14,7 @@ Then answer the questions like this:
 
 This whole process means we have created an application called part1. If we had answered "Yes" to the question "Install with npm and start now?" the tool would have installed all required dependencies and started the application automatically. But we will work through the steps manually
 
-1. Create the files using npm create vit@latest
+1. Create the files using npm create vite@latest
 2. Change Directory into the folder
 3. `npm install` the required library 
 4. `npm run dev` to start the process
