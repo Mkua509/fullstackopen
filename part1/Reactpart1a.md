@@ -9,8 +9,6 @@ We will now start by creating an application using a tool called __Vite__, Namel
 ```
 npm create vite@latest
 ```
-Then answer the questions like this:
-![alt text](image.png)
 
 This whole process means we have created an application called part1. If we had answered "Yes" to the question "Install with npm and start now?" the tool would have installed all required dependencies and started the application automatically. But we will work through the steps manually
 
@@ -319,6 +317,7 @@ const App = () => {
 ```
 
 This error would occur:
+
 ![alt text](image.png)
 
 
