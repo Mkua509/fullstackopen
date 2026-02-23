@@ -117,3 +117,113 @@ Above, the first and second values are made to be 1 and 2 respectively. Well by 
 
 
 ### Object
+
+There are a few different ways of defining objects in JS. One very common method is using object literals, which happens by listing its properties within braces.
+
+```jsx
+const object1 = {
+  name: 'Arto Hellas',
+  age: 35,
+  education: 'PhD',
+}
+
+const object2 = {
+  name: 'Full Stack web application development',
+  level: 'intermediate studies',
+  size: 5,
+}
+
+const object3 = {
+  name: {
+    first: 'Dan',
+    last: 'Abramov',
+  },
+  grades: [2, 3, 5, 3],
+  department: 'Stanford University',
+}
+```
+
+The values of the properties can be of any type (Inclusive of objects themselves).
+
+The properties of an object are referenced using the `dot` notation, or by using brackets:
+
+```jsx
+console.log(object1.name) // Arto Hellas printed
+const fieldName = 'age'
+console.log(object1[fieldName]) // 35 is printed
+```
+
+You are also able to add properties to an object on the fly by either using dot notation or brackets:
+
+```jsx
+object1.address = "Helsinki"
+object1['secret number'] = 12345
+```
+
+The latter has to be done with brackets because you can't include a space using dot notation. Objects also have methods too (But self study this)
+
+Objects can be defined using constructor functions, which results in similarities e.g. Java's classes. However JS does not have classes in the same senses as OOP languages. There has been in newest version class syntax which helps structure oop classes
+
+### Functions
+
+The complete process of an arrow function looks like this:
+
+```jsx
+const sum = (p1, p2) => {
+  console.log(p1)
+  console.log(p2)
+  return p1 + p2
+  }
+```
+
+Function calling
+
+```jsx
+const result = sum(1,5)
+console.log(result)
+```
+
+If there is only one parameter we can exclude () from the function
+
+```jsx
+const square = p => {
+  console.log(p)
+  return p * p
+}
+```
+
+If the function only contains a single expression then the braces are not needed. In this case, the function only returns the result of its only expression. Now, if we remove console printing, we can further shorten the function definition:
+
+```jsx
+const square = p => p * p
+```
+
+This form is handy when manipulating arrays - e.g. map method
+
+```jsx
+const t = [1, 2, 3]
+const tSquared = t.map(p => p * p)
+// tSquared is now [1, 4, 9]
+```
+
+The original way before arrow functions is much more similar to python there are two ways to reference the function one is giving a name in func declaration:
+
+```jsx
+function product(a,b) {
+  return a * b
+
+  const result = product(2, 6)
+  // result is now 12
+}
+```
+
+The other way is by using a function expression. In this case there is no need to give the func a name and the definition may reside among the rest of the code:
+
+```jsx
+const average = function(a,b) {
+  return (a + b)/2
+}
+
+const result = average(2, 5)
+// result is now 3.5
+```
