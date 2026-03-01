@@ -282,3 +282,5 @@ const App = () => {
   )
 }
 ```
+
+In order to access the objects in the array we use the dot product and it's corresponding index such as parts[0].name for "Fundamentals of React" as an example
