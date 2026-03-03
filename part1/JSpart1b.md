@@ -284,3 +284,46 @@ const App = () => {
 ```
 
 In order to access the objects in the array we use the dot product and it's corresponding index such as parts[0].name for "Fundamentals of React" as an example
+
+### Objects methods and "this"
+
+Arrow functions and functions defined using the `function` keyword vary substantially when it comes to how they behave and respect to the keyword `this`, which refers to the object itself.
+
+We can assign methods to an object by defining properties that are functions:
+
+```jsx
+const arto = {
+  name: 'Arto Hellas',
+  age: 35,
+  education: 'PhD',
+
+  greet: function() {
+    console.log('hello, my name is ' + this.name)
+  },
+}
+
+arto.greet()  // "hello, my name is Arto Hellas" gets printed
+```
+
+Methods can be assigned to objects even after the creation of the object:
+
+
+```jsx
+const arto = {
+  name: 'Arto Hellas',
+  age: 35,
+  education: 'PhD',
+  greet: function() {
+    console.log('hello, my name is ' + this.name)
+  },
+}
+
+
+arto.growOlder = function() {
+  this.age += 1
+}
+
+console.log(arto.age)   // 35 is printed
+arto.growOlder()
+console.log(arto.age)   // 36 is printed
+```
